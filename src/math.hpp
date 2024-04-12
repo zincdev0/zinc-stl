@@ -4,12 +4,12 @@
 namespace math {
 	// Est. ~11 cycles
 	template <typename T> constexpr T min(const T &a, const T &b) {
-		return a * (a < b) + b * (a > b);
+		return a * (a < b) + b * (a >= b);
 	}
 
 	// Est. ~11 cycles
 	template <typename T> constexpr T max(const T &a, const T &b) {
-		return a * (a > b) + b * (a < b);
+		return a * (a > b) + b * (a <= b);
 	}
 
 	// Est. ~22 cycles
